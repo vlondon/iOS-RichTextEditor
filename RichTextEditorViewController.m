@@ -219,7 +219,7 @@
     [items addObject:btnTxtPosLeftNav];
     [items addObject:btnTxtPosCenterNav];
     [items addObject:btnTxtPosRightNav];
-    [items addObject:btnTxtPosFullNav];
+    //[items addObject:btnTxtPosFullNav];
     [items addObject:btnTxtPosIndentNav];
     [items addObject:btnTxtPosOutdentNav];
     [items addObject:undo];
