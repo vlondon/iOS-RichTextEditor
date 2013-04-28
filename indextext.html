@@ -1,0 +1,25 @@
+<html>
+    <script type="text/javascript">
+        document.addEventListener('touchend', function(e) { // Listen for touch end on the document
+            // Get the touch and coordinates
+            var touch = e.changedTouches.item(0);
+            var touchX = touch.clientX;
+            var touchY = touch.clientY;
+
+            // Get the rect for the content  
+            var contentDIVRect = document.getElementById('content').getClientRects()[0];
+
+            // Make sure we don't block touches to the content div
+            if (touchX > contentDIVRect.left && touchY < contentDIVRect.bottom) {
+            return;
+            }
+
+            // If the touch is out of the content div then simply give the div focus
+            document.getElementById('content').focus();
+        }, false); 
+    </script>
+    
+    <body>
+        <div id="content" contenteditable="true" style="font-family: 'Open Sans', 'Helvetica', 'Meityo', sans-serif, font-weight: 300;">Delete this text and write your own</div>
+    </body>
+</html>
